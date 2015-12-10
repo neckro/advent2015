@@ -55,5 +55,5 @@ function santa(pass) {
   }
 }
 
-console.log('6-1', santa(1));
-console.log('6-2', santa(2));
+console.log('6-1', santa(1));  // 377891
+console.log('6-2', santa(2));  // 14110788

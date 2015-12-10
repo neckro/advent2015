@@ -75,7 +75,7 @@ function santa(override) {
 var vals = {};
 while (!vals.a) santa();
 var aval = vals.a;
-console.log('7-1', aval);
+console.log('7-1', aval);  // 3176
 vals = {};
 while (!vals.a) santa(aval);
-console.log('7-2', vals.a);
+console.log('7-2', vals.a);  // 14710
