@@ -1,6 +1,3 @@
-var _ = require('lodash');
-var fs = require('fs');
-
 var input = '1113222113';
 
 function say(input) {

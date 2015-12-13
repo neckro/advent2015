@@ -19,14 +19,14 @@ function scan(input) {
 function recurse(obj) {
   if (!_.isArray(obj) && _.contains(_.values(obj), 'red')) return 0;
   var subtotal = 0;
-  _.each(obj, function(val, key) {
+  _.each(obj, function(val) {
     if (_.isObject(val)) {
       subtotal += recurse(val);
       return;
     }
     var num = parseInt(val, 10);
     if (_.isFinite(num)) subtotal += num;
-  })
+  });
   return subtotal;
 }
 

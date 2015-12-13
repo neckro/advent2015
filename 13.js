@@ -15,7 +15,7 @@ _.forEach(input.split('\n'), function(line) {
   if (!_.isObject(bmap)) bmap = {};
   bmap[beheld] = units;
   mapping[beholder] = bmap;
-})
+});
 function findbest() {
   var persons = _.keys(mapping);
   var best = -Infinity;

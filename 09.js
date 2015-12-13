@@ -11,10 +11,9 @@ function getRoutes() {
     if (!matches) return;
     var loca = matches[1];
     var locb = matches[2];
-    var distance = matches[3];
+    var distance = parseInt(matches[3], 10);
     if (!_.isObject(routes[loca])) routes[loca] = {};
     if (!_.isObject(routes[locb])) routes[locb] = {};
-    var distance = parseInt(distance, 10);
     if (_.isNaN(distance)) {
       console.error(loca, locb, distance);
       return;
@@ -44,11 +43,11 @@ while (permute(locs)) {
   }));
   if (distance < best) {
     best = distance;
-    console.log("New  best:", locs.join(' -> '), '=', best);
+    console.log('New  best:', locs.join(' -> '), '=', best);
   }
   if (distance > worst) {
     worst = distance;
-    console.log("New worst:", locs.join(' -> '), '=', worst);
+    console.log('New worst:', locs.join(' -> '), '=', worst);
   }
 }
 console.log('9-1', best);   // 207
